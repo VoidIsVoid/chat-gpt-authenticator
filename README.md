@@ -2,7 +2,10 @@
 
 # ChatGPT Authenticator
 
-This node library is based on this python [implementation](https://github.com/acheong08/OpenAIAuth/blob/main/src/OpenAIAuth.py).
+This node library is based on this
+python [implementation](https://github.com/acheong08/OpenAIAuth/blob/main/src/OpenAIAuth.py).
+
+Since AllanOricil/chat-gpt-authenticator is not maintained, I forked it for further update.
 
 ## How to use
 
@@ -12,46 +15,49 @@ Create an Open AI account in this [link](https://platform.openai.com/login/).
 
 ```js
 //requests a new token or return a token that has already been fetched
-chatGPTAuthTokenService.getToken() : <Promise>
+chatGPTAuthTokenService.getToken()
+:
+<Promise>
 
-//requests a new token
-chatGPTAuthTokenService.refreshToken() : <Promise>
+    //requests a new token
+    chatGPTAuthTokenService.refreshToken() :
+    <Promise>
 ```
 
 ### ES Modules
 
 ```js
-import { ChatGPTAuthTokenService } from "chat-gpt-authenticator";
+import {ChatGPTAuthTokenService} from "chat-gpt-authenticator";
 
 const chatGptAuthTokenService = new ChatGPTAuthTokenService(
-  "OPEN_AI_EMAIL",
-  "OPEN_AI_PASSWORD"
+    "OPEN_AI_EMAIL",
+    "OPEN_AI_PASSWORD"
 );
 
 (async () => {
-  const token = await chatGptAuthTokenService.getToken();
-  console.log(token);
+    const token = await chatGptAuthTokenService.getToken();
+    console.log(token);
 
-  token = await chatGPTAuthTokenService.refreshToken();
-  console.log(token);
+    token = await chatGPTAuthTokenService.refreshToken();
+    console.log(token);
 })();
 ```
 
 ### Common JS
 
 ```js
-const { ChatGPTAuthTokenService } = require("chat-gpt-authenticator");
+const {ChatGPTAuthTokenService} = require("chat-gpt-authenticator");
 
 const chatGPTAuthTokenService = new ChatGPTAuthTokenService(
-  "OPEN_AI_EMAIL",
-  "OPEN_AI_PASSWORD"
+    "OPEN_AI_EMAIL",
+    "OPEN_AI_PASSWORD"
 );
 
 (async () => {
-  let token = await chatGPTAuthTokenService.getToken();
-  console.log(token);
+    let token = await chatGPTAuthTokenService.getToken();
+    console.log(token);
 
-  token = await chatGPTAuthTokenService.refreshToken();
-  console.log(token);
+    token = await chatGPTAuthTokenService.refreshToken();
+    console.log(token);
 })();
 ```
