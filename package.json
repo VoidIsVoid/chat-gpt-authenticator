@@ -2,13 +2,13 @@
   "name": "chat-gpt-authenticator",
   "version": "0.0.0",
   "description": "OpenAI Authentication Library for ChatGPT",
-  "author": "Allan Oricil <allan@oricil.com>",
+  "author": "Gimling<nggim1ing@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/AllanOricil/chat-gpt-authenticator#readme",
+  "homepage": "https://github.com/VoidIsVoid/chat-gpt-authenticator#readme",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AllanOricil/chat-gpt-authenticator"
+    "url": "https://github.com/VoidIsVoid/chat-gpt-authenticator"
   },
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
